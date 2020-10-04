@@ -1,0 +1,19 @@
+
+public class ReversingInt {
+	/* main */
+	public static void main(String[] args) {
+		ReversingInt obj = new ReversingInt();
+		int[] array = obj.reverseArray(1, 2, 3, 4, 5);
+		for (int i : array)
+			System.out.print(i + " ");
+	}
+
+	/* reversing integer array */
+	int[] reverseArray(int... arr) {
+		int[] temp = new int[arr.length];
+		for (int i = 0; i < arr.length; i++) {
+			temp[i] = arr[arr.length - i - 1];
+		}
+		return temp;
+	}
+}
